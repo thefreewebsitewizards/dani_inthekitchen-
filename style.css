@@ -669,6 +669,9 @@ nav.scrolled {
         animation-duration: 20s;
     }
 }
+
+
+
 /* Unique Work Section */
 #my-unique-work {
     padding: 5rem 2rem;
@@ -699,9 +702,16 @@ nav.scrolled {
 .unique-reel-container {
     display: flex;
     gap: 3rem;
-    overflow-x: hidden;
+    overflow-x: auto;
     padding: 2rem 1rem;
     scroll-behavior: smooth;
+    position: relative;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.unique-reel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .unique-phone-mockup {
@@ -711,7 +721,6 @@ nav.scrolled {
     flex-shrink: 0;
     background: #000;
     border-radius: 40px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     padding: 15px;
     transition: transform 0.3s ease;
 }
@@ -722,8 +731,8 @@ nav.scrolled {
 
 .unique-scroll-btn {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 57%;
+    transform: translateY(-70%);
     width: 50px;
     height: 50px;
     background-color: var(--blue-ribbon);
@@ -736,11 +745,12 @@ nav.scrolled {
     justify-content: center;
     z-index: 10;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .unique-scroll-btn:hover {
     background-color: var(--winter-leaves);
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-70%) scale(1.1);
 }
 
 .unique-scroll-btn svg {
@@ -749,20 +759,12 @@ nav.scrolled {
 }
 
 .unique-scroll-left {
-    left: calc(50% - 400px);
+    left: 0;
 }
 
 .unique-scroll-right {
-    right: 2rem;
+    right: 0;
 }
-
-@media (max-width: 1200px) {
-    .unique-scroll-left {
-        left: 2rem;
-    }
-}
-
-
 
 @media (max-width: 768px) {
     .unique-reel-container {
@@ -777,21 +779,20 @@ nav.scrolled {
     }
     
     .unique-scroll-btn {
-        top: auto;
-        bottom: 20px;
-        transform: none;
+        width: 50px;
+        height: 50px;
     }
     
     .unique-scroll-left {
-        left: 20px;
+        left: 10px;
     }
     
     .unique-scroll-right {
-        right: 20px;
+        right: 10px;
     }
 }
 
-/* Keep existing phone screen styles */
+/* Phone screen styles */
 .phone-screen {
     width: 100%;
     height: 100%;
