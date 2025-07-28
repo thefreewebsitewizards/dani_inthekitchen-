@@ -301,7 +301,7 @@ nav.scrolled {
 .main-rectangle {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 550px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
